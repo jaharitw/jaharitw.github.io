@@ -1,0 +1,16 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="style.css"><title>Connecting to TikTok</title></head><body><main>
+<h1>Finishing TikTok sign-in…</h1>
+<p id="msg" class="muted">Passing the sign-in back to the uploader on this computer.</p>
+<p><a id="go" href="#">Click here if nothing happens</a></p>
+<script>
+  // TikTok sends the user here (an https page it accepts); hand the query string to the local uploader.
+  var target = "http://localhost:3455/callback/" + window.location.search;
+  document.getElementById("go").href = target;
+  if (window.location.search.indexOf("code=") !== -1 || window.location.search.indexOf("error=") !== -1) {
+    window.location.replace(target);
+  } else {
+    document.getElementById("msg").textContent = "No sign-in information found. Start the sign-in from the uploader.";
+  }
+</script>
+</main></body></html>
