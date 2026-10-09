@@ -1,0 +1,7 @@
+:root{--bg:#fbfaf7;--fg:#1d1d1f;--muted:#5f6368;--accent:#c2410c}
+@media (prefers-color-scheme:dark){:root{--bg:#141414;--fg:#ececec;--muted:#a0a0a0;--accent:#fb923c}}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+main{max-width:720px;margin:0 auto;padding:48px 16px}
+h1{font-size:2rem;line-height:1.2;margin:0 0 8px}h2{font-size:1.2rem;margin-top:32px}
+p,li{color:var(--fg)}small,.muted{color:var(--muted)}a{color:var(--accent)}
+nav{display:flex;gap:16px;margin-bottom:40px;font-size:15px}
